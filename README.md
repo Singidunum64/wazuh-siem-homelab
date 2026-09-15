@@ -8,7 +8,8 @@ The lab is used to simulate security activity in an isolated virtual environment
 
 The environment consists of three virtual machines connected through a VirtualBox Host-Only network.
 
-<!-- Architecture diagram will be added here. -->
+![Lab Architecture](architecture/lab-architecture.png)
+
 
 | System     | Role                        | Host-Only IP     |
 | ---------- | --------------------------- | ---------------- |
