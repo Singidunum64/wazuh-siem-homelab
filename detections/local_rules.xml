@@ -1,0 +1,18 @@
+
+<!-- Local Wazuh rules -->
+
+<group name="local,windows,authentication,">
+
+  <!-- Windows network authentication brute-force detection -->
+  <rule id="100100" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <field name="win.eventdata.logonType">^3$</field>
+    <same_field>win.eventdata.ipAddress</same_field>
+    <description>Windows network authentication brute-force detected: 5 failed network logons from the same source IP within 60 seconds</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failed,brute_force,windows_security,</group>
+  </rule>
+
+</group>
